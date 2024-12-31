@@ -1,0 +1,396 @@
+@font-face{
+    font-family:'mifuente';
+    src: url('/assent/FONTS/TypoSlab\ Irregular\ Demo.otf')format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'mifuente-2';
+    src:url('/assent/FONTS/Milanello\ -\ Free\ Personal.otf')format('truetypr');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 170px;
+    
+}
+
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%; 
+    z-index: 1000; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:white;
+    font-size: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    padding: 10px 30px; 
+    color: #162882;
+}
+
+.logo{
+    
+    max-width: 15%;
+    padding: 2px;
+    margin-left: 50px;
+    border-bottom: solid 4px #80cc28;
+}
+
+main{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+.carousel{
+    margin-top: 5PX;
+    width: 100%;
+}
+
+
+.nav-list{
+    display: flex;
+    list-style-type: none;
+    gap: 1rem;
+
+    li{
+        transition: all 0.5s;
+       
+        a{
+            text-decoration: none;
+            color: #162882;
+            transition: 0.7s;
+            border-radius: 7px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            
+        }
+        a:hover{
+            color:#80cc28;
+        }
+    }
+    li:hover{
+        scale: 1.2;
+    }
+    
+}
+.abrir-menu,.cerrar{
+    display: none;
+    
+    
+}
+
+h2{
+    text-align: center;
+    font-size: 20px;
+}
+
+.mis-vis{
+    display: flex;
+    margin-inline: 12%;
+    gap: 0 80px;
+    font-size: 20px;
+
+
+    .Mision, .Vision{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h2{
+        font-size: 35px;
+
+    }
+}
+.mis-vis section {
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave */
+    padding: 4%;
+  }
+  
+  .mis-vis section:hover {
+    background-color: #162882;
+    color: white;
+  }
+  
+  .mis-vis section:hover h2 {
+    color: #ffffff; 
+    transition: color 0.3s ease; 
+  }
+  .mis-vis section:hover h2 i {
+    color: #ffffff; /* Cambia a blanco (o el color que prefieras) */
+    transition: color 0.3s ease; /* Transición suave para el cambio de color */
+  }
+  
+/* Contenedor principal */
+.logro {
+    display: grid; /* Usa Grid en lugar de Flexbox */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Columnas adaptables */
+    gap: 20px; /* Espacio entre elementos */
+    padding: 20px; /* Espacio alrededor del contenedor */
+    justify-items: center; /* Centra las imágenes horizontalmente */
+    align-items: center; /* Centra las imágenes verticalmente */
+    transition: transform 0.3s ease;
+    background-color: #7fcc2856;
+  }
+  .logro img:hover {
+    transform: scale(1.05); /* Efecto de agrandamiento al pasar el cursor */
+  }
+  
+
+  .logro img {
+    transition: transform 0.3s ease;
+    width: 100%; /* Ocupará el ancho del contenedor grid */
+    max-width: 250px; /* Máximo tamaño para las imágenes */
+    height: 250px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Evita que la imagen se distorsione */
+    border-radius: 10px; /* Opcional: bordes redondeados */
+   
+  }
+
+.container{
+    width: 100%;
+    padding: 0 8%;
+}
+.container h2{
+    
+    position: relative;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 10%;
+    margin-bottom: 60px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 35px;
+    color: #162882;
+}
+.serv{
+    border-bottom: solid 3px #80cc28 ;
+    width: 50%; 
+    margin-top: 5px; 
+    margin-bottom: 10px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    
+
+}
+
+
+.container h2 ::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 100px;
+    height: 5px;
+    background: #162882;
+}
+
+.container .flex-section {
+    display: flex;
+    grid-template-columns: repeat(auto-fit,minmax(250px ,1rf));
+    grid-gap: 30px;
+}
+
+
+.container .flex-section .Servicios {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    text-align: center;
+    border-radius: 5px;
+    transition: transform 0.5s, 0.5s, color 0.5s;
+    cursor: pointer;
+    font-size: 15px;
+    gap: 10px;
+    color: #162882;
+    background-color: #eaeaea;
+    margin-bottom: 150px;
+    margin-top: 10px;
+
+    svg {
+        height: 7vh;
+        width: auto;
+    }
+}
+
+.container .flex-section .Servicios:hover {
+    background: #162882;
+    color: #eaeaea;
+    transform: scale(1.05); 
+}
+
+.container .flex-section .Servicios:hover a {
+    transition: 0.5s; 
+}
+
+
+/*body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}*/
+
+
+.footer {
+    background-color: #162882;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position:static;
+    font-size: 15px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #80cc28;
+}
+
+
+.contacts p, .location p {
+    margin: 5px 0;
+}
+
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #555;
+    padding-top: 10px;
+    font-size: 0.9rem;
+    color: #ccc;
+    font-family: 'mifeunte-2';
+}
+.flex-section{
+    display: flex;
+}
+
+
+.v-mision , .v {
+    /*border-bottom: solid 4px #f9a826;*/
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    color: #464444;
+    i{
+        color: #162882;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin: 20px 0;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    .abrir-menu,
+    .cerrar 
+    {
+        display: block;
+        border: 0;
+        font-size: 2.50rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    .nav{
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .nav{
+        display: flex;
+        flex-direction: row;
+        align-items: end;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #555;
+        box-shadow: 0 0 0 100vmax rgb(0 0 0 .5);
+        z-index: 1;
+        height: 100%;
+    }
+    .nav.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-list{
+        flex-direction: column;
+        background-color: #555;
+        width: 100%;
+
+        a{
+            color: black;
+        }
+        
+
+    }
+    .flex-section{
+        display: flex;
+        flex-direction: column;
+    }
+    .mis-vis{
+        display: flex;
+        flex-direction: column;w
+    }
+    
+}
+
+
+
